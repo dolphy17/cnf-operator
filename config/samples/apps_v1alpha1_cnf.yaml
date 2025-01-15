@@ -1,0 +1,9 @@
+apiVersion: apps.example.com/v1alpha1
+kind: CNF
+metadata:
+  labels:
+    app.kubernetes.io/name: project
+    app.kubernetes.io/managed-by: kustomize
+  name: cnf-sample
+spec:
+  # TODO(user): Add fields here

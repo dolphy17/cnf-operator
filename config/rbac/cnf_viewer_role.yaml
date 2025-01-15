@@ -1,0 +1,23 @@
+# permissions for end users to view cnfs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: project
+    app.kubernetes.io/managed-by: kustomize
+  name: cnf-viewer-role
+rules:
+- apiGroups:
+  - apps.example.com
+  resources:
+  - cnfs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps.example.com
+  resources:
+  - cnfs/status
+  verbs:
+  - get
